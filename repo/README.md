@@ -13,24 +13,6 @@ SQL analysis of ~38,000 bank loans to segment borrowers, find high-risk loan cat
 | 3. Good vs. bad loans, month-by-month performance | CTEs, `LAG`, `RANK` window functions |
 | 4. KPI summary views | `CREATE VIEW` for dashboard-ready metrics |
 
-## Run it yourself
-
-```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
-python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-jupyter notebook loan_analysis.ipynb
-```
-
-Then choose **Kernel → Restart & Run All**. The notebook downloads the dataset from Kaggle automatically (via `kagglehub`), builds a local SQLite database and runs every query.
-
-To refresh the saved outputs from the command line:
-
-```bash
-jupyter nbconvert --to notebook --execute --inplace loan_analysis.ipynb
-```
-
 ## Data
 
 Kaggle: [Financial Loan Dataset](https://www.kaggle.com/datasets/datawitharyan/financial-loan-dataset) (38,576 loans).
